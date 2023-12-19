@@ -1,20 +1,21 @@
 ch = int(input("Multiplying two (1.)square matrices or (2.)rectangular matrices? (1/2): "))
 
+# get the dimensions of square matrices
 if ch == 1:
-    # get the dimensions of square matrices
     n = int(input("Enter square matrices order(nxn): "))
-    r = n
-    c = n
-    r2 = n
-    c2 = n
+    r,c,r2,c2=n,n,n,n
+    
 elif ch == 2:
     r = int(input("Enter no. of rows of first matrix: "))
     c = int(input("Enter no. of columns of first matrix:"))
     r2 = int(input("Enter no. of rows of second matrix: "))
     c2 = int(input("Enter no. of columns of second matrix:"))
+    
+    # check if the matrices can be multiplied
     if c!=r2:
         print("The given confirguration is not valid to multiply two matrices")
         exit()
+        
 else:
     print("Please enter valid number")
 
